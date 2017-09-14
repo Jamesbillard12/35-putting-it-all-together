@@ -59,7 +59,7 @@ class Navbar extends React.Component {
       <header className='navbar'>
         <main>
         <Icon className='logo' name='tick' />
-        <h1>cfgram</h1>
+        <h1>TICK-it</h1>
 
         {util.renderIf(this.props.loggedIn,
           <div className='panel'>

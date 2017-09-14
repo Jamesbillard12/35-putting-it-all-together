@@ -25,7 +25,7 @@ export default new Router()
     })
     .then(response => {
       console.log('222222222');
-      return superagent.get('https://www.googleapis.com/plus.login/v1/people/me/openIdConnect')
+      return superagent.get('https://www.googleapis.com/plus/v1/people/me/openIdConnect')
       .set('Authorization', `Bearer ${response.body.access_token}`)
     })
     .then(response => {

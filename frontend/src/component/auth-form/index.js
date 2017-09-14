@@ -1,3 +1,4 @@
+import './_auth-form.scss'
 import React from 'react'
 import superagent from 'superagent'
 import {isEmail, isAlphanumeric, isAscii} from 'validator'
@@ -108,8 +109,8 @@ class AuthForm extends React.Component {
 
   usernameCheckAvailable(username){
     return superagent.get(`${__API_URL__}/usernames/${username}`)
-    .then(() => this.setState({usernameAvailable: true}))
-    .catch(() => this.setState({usernameAvailable: false}))
+    .then(() => this.setState({usernameAvailable: false}))
+    .catch(() => this.setState({usernameAvailable: true}))
   }
 
   handleSubmit(e){
@@ -182,7 +183,7 @@ class AuthForm extends React.Component {
         {util.renderIf(this.props.auth === 'login',
           <div>
             <h2>login.</h2>
-            <a href={formattedURI}>login with google</a>
+            <a className='google' href={formattedURI}>login with google</a>
           </div>
         )}
 

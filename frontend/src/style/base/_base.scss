@@ -31,6 +31,12 @@ blockquote {
 
 
 // form
+
+form {
+  padding-top: 20%;
+  padding-left: 42%;
+}
+
 label {
   font-size: 1.25em;
   font-weight: bolder;
@@ -89,3 +95,8 @@ ul li { list-style: disc; }
 ol li { list-style: decimal; }
 ol ol li , ul ol li { list-style: lower-alpha; }
 ol ul li , ul ul li { list-style: square; }
+
+
+h1 {
+  color: $color-white;
+}
